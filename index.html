@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- choice tab -->
+    <div id="choice-tab">
+      <h2>Player</h2>
+      <div id="options">
+        <div class="option">
+          <img src="images/rock.png" class="rock" alt="Rock">
+        </div>
+        <div class="option">
+          <img src="images/paper.png" class="paper" alt="Paper">
+        </div>
+        <div class="option">
+          <img src="images/scissors.png" class="scissors" alt="Scissors">
+        </div>
+      </div>
+    </div>
+
+    <!-- game tab -->
+    <div id="game-tab"></div>
+
+    <!-- btn to continue  -->
+    <button id="btn-continue">Click To Continue</button>
+
+    <!-- score -->
+    <div id="score">
+      <div id="tabs">
+        <div class="tab player">
+          <h3>Player</h3>
+          <div class="points player-points">
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+          </div>
+        </div>
+        <div class="tab computer">
+          <h3>Computer</h3>
+          <div class="points computer-points">
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end of game -->
+    <div id="end-of-game">
+      <h1 id="final-message"></h1>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

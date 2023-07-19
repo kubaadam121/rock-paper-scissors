@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Caveat', cursive;
+  background: url('images/bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+}
+
+.container {
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+img {
+  width: 100%;
+}
+
+/* choice tab */
+#choice-tab {
+  margin-top: 100px;
+  padding: 2rem;
+  padding-bottom: 4rem;
+  background: url('images/gameBg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top: .8rem solid #05202b;
+}
+
+#choice-tab h2 {
+  font-size: 3rem;
+}
+
+#options {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.option {
+  width: 100px;
+  height: 100px;
+  background: url('images/bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  transition: all .1s ease-in-out;
+}
+
+.option:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  border: 5px solid #fff;
+}
+
+/* game tab */
+#game-tab {
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 100px;
+  padding: 2rem;
+  padding-bottom: 4rem;
+  background: url('images/gameBg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top: .8rem solid #05202b;
+}
+
+#game-tab > div {
+  font-size: 6.5rem;
+  color: #c84343;
+}
+
+/* btn */
+#btn-continue {
+  display: none;
+  width: 100%;
+  font-size: 2.5rem;
+  font-family: 'Caveat', cursive;
+  background: #1ebaba;
+  transition: font-size .1s ease-in-out;
+  border: none;
+}
+
+#btn-continue:hover {
+  cursor: pointer;
+  font-size: 2.7rem;
+}
+
+/* score */
+#score {
+  width: 80%;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+#tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tab.player {
+  animation: slideInFromLeft .3s ease-in;
+}
+
+.tab.computer {
+  animation: slideInFromRight .3s ease-in;
+}
+
+.tab h3 {
+  font-size: 3rem;
+}
+
+.tab p {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.tab .points {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.tab .points .point {
+  width: 50px;
+  height: 50px;
+  margin: 0 .4rem;
+  border-radius: 50%;
+  border: 5px solid #ca924c;
+}
+
+/* end of game */
+#end-of-game {
+  display: none;
+  width: 300px;
+  height: 300px;
+  background: url('images/final-msg.jpg');
+  text-align: center;
+  color: #c84343;
+  padding: 1rem;
+  cursor: pointer;
+  border: 10px solid #c84343;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+#end-of-game #final-message {
+  font-size: 4rem;
+  padding-top: 1rem;
+  animation: slideInFromBottom .5s ease-in;
+}
+
+/* media queries */
+@media(max-width: 678px) {
+  .option {
+    width: 70px;
+    height: 70px;
+  }
+
+  .tab .points .point {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInToLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
